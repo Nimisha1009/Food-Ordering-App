@@ -132,8 +132,13 @@ font-weight: 300;
     cursor: pointer;
     transition: 0.5s all step-end;
 }
+#card-top{
+    display:flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
 #item-card img{
-    width: 110px;
+    width: 100px;
     height: 100px;
     border-radius: 50%;
     margin: auto;
@@ -174,26 +179,7 @@ font-weight: 300;
         font-size: 18px;
     }
     
-  #cart{
-    background: whitesmoke;
-    padding-right: 30px;
-    overflow-y: scroll;
-  }
-  .taste-header{
-      padding-top: 40px;
-      padding-bottom: 10px;
-      position: sticky;
-      top: 0;
-      background: whitesmoke;
-    }
-    .item-menu{
-        margin: 0;
-        font-size: 30px;
-        margin-top: 40px;
-        color: indianred;
-        background: whitesmoke;
-        
-    }
+  
     .border{
         width: 80px;
         height: 4px;
@@ -220,8 +206,8 @@ font-weight: 300;
     }
     .list-card:hover img{
         transition: 0.5s all ease-in-out;
-        transform: scale(1.2)
-    }
+        transform: scale(1.2);
+}
     .list-name{
         font-size: 20px;
         margin: 0 10px;
@@ -229,19 +215,46 @@ font-weight: 300;
         text-transform: capitalize;
         color: rgb(94, 43, 43);
     }
+    #item-price{
+        margin:0;
+        color:rgb(2,27,27);
+        font-weight: 500;
+        font-size: 18px;
+    }
 
     #food-items{        
         padding: 5px 10px;
     }
     #category-list{
-        display: none;
+       
     }
      .cart-toggle{
        display: none;
      }
+     #cart{
+        background: lavender;
+        padding-right: 30px;
+        overflow-y: scroll;
+      }
+      
+     .item-menu{
+        margin: 0;
+        font-size: 30px;
+        margin-top: 40 px;
+        color: indianred;
+        background: whitesmoke;
+
+    }
+     .taste-header{
+        padding-top: 40px;
+        padding-bottom: 10px;
+        position: sticky;
+        top: 0;
+        background: whitesmoke;
+    }
     
     #cart-page{
-        background: white;
+        background: rgb(255, 255, 255);
         margin: 40px 10px;
         margin-right: 50px;
         padding: 20px 30px;
