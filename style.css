@@ -232,7 +232,7 @@ font-weight: 300;
        display: none;
      }
      #cart{
-        background: lavender;
+        background: whitesmoke;
         padding-right: 30px;
         overflow-y: scroll;
       }
@@ -240,7 +240,7 @@ font-weight: 300;
      .item-menu{
         margin: 0;
         font-size: 30px;
-        margin-top: 40 px;
+        margin-top:  px;
         color: indianred;
         background: whitesmoke;
 
