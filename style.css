@@ -106,6 +106,12 @@ font-weight: 300;
 #biryani,#paneer,#chicken,#vegetable,#chinese,#south-indian{
     margin-top: 40px;   
 }
+#paneer #item-card,#vegetable #item-card{
+    background: greenyellow;
+}
+#chinese #item-card,#south-indian #item-card{
+    background: rgb(221,243,243);
+}
   .food-items{
 
   }
@@ -170,4 +176,21 @@ font-weight: 300;
     
   #cart{
     background: lavender;
+    padding-right: 30px;
+    overflow-y: scroll;
   }
+  .taste-header{
+      padding-top: 40px;
+      padding-bottom: 10px;
+      position: sticky;
+      top: 0;
+      background: whitesmoke;
+    }
+    .item-menu{
+        margin: 0;
+        font-size: 30px;
+        margin-top: 40px;
+        color: indianred;
+        background: whitesmoke;
+        
+    }
