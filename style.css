@@ -492,10 +492,10 @@ color: white;
     }
     #m-total-amount{
         display: inline-block;
-        color: lightcoral;
+        color: rgb(18, 85, 44);
         padding: 5px 10px;
         margin: 0;
-        border:  1px solid lightcoral;
+        border:  1px solid rgb(170, 11, 109);
         float: right;
     }
     .cart-btn{
