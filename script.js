@@ -262,13 +262,13 @@ const categoryListData= [...new Map(foodItem.map(item=> [item
  ['category'],item])).values()];
  console.log(categoryListData);
 
-    function categoryList(){
+    function categoryLists(){
     var categoryList= document.getElementById('category-list');
-    categoryListData.map(item=>{
+        categoryListData.map(item=> {
         var listCard= document.createElement('div');
         listCard.setAttribute('class','list-card');
 
-        var listImg= document.createElement('Img');
+        var listImg= document.createElement('img');
         listImg.src= item.img;
           
         var listName= document.createElement('a');
@@ -284,3 +284,4 @@ const categoryListData= [...new Map(foodItem.map(item=> [item
        
     })
 }
+ categoryLists();
