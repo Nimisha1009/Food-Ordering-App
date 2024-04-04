@@ -84,6 +84,7 @@ font-weight: 300;
     white-space: nowrap;
      text-overflow: ellipsis;
      cursor: pointer;
+     text-transform: capitalize;
 
   }
   .add-box i{
@@ -113,7 +114,7 @@ font-weight: 300;
     background: rgb(221,243,243);
 }
   .food-items{
-
+      display: none;
   }
   #category-name,.item-menu{
     margin: 10px;
@@ -337,3 +338,15 @@ color: crimson;
 background: none;
 border:1px solid 
     }
+
+
+    @media screen and (max-width: 800px)
+     {
+        #container{
+            display: none;
+        }
+        #mobile-view{
+            display: grid;
+        }
+     }   
+    
