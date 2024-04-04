@@ -347,6 +347,79 @@ border:1px solid
         }
         #mobile-view{
             display: grid;
+            grid-template-rows: 120px 1fr 50px;
+            overflow: hidden;
+            height: 100%;
         }
+        .mobile-top{
+            padding:5px 15px;
+            z-index: 1;
+            background: white;
+
+        }
+        .item-container{
+            overflow-y:scroll;
+        }
+        .logo-box,.top-menu{
+          display: flex;
+    justify-content: space-between;
+   align-items: center;
+        }
+             .logo-box img{
+        width: 90px;
+          height: 70px;
+}         
+            .top-menu{
+                color: indianred;
+            }
+            .top-menu i{
+                font-size: 20px;
+                cursor: pointer;
+                padding: 12px 5px;
+                border-radius: 50%;
+            }
+            .m-cart-toggle{
+                color: white;
+                background: lightcoral;
+            }
+
+            .category-header{
+                width: 100%;
+                display: flex;
+                overflow-x: scroll;
+                position: sticky;
+                top: 0;
+                background: white;
+                z-index: 1;
+                border-bottom: 1px solid rgb(219,219,219);
+                margin: 0;
+            }
+            .toggle-category{
+                display: none;
+                position: relative;
+            }
+            .list-card{
+                margin: 0 10px;
+                text-align: center;
+            }
+            .list-card img{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+            .list-card:hover{
+                background: none;
+
+            }
+            .list-card:hover img{
+                transform: none;
+                transition: none;
+            }
+
+
+
+
+
+
      }   
     
