@@ -10,7 +10,6 @@ html{
     height: 100%;
 }
 body{
-   
     font-family: 'Nunito', sans-serif;
     height: 100%;
 }
@@ -131,6 +130,7 @@ font-weight: 300;
     background: rgb(253, 221, 226);
     cursor: pointer;
     transition: 0.5s all step-end;
+    font-family: 'Nunito', sans-serif;
 }
 #card-top{
     display:flex;
