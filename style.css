@@ -10,10 +10,8 @@ html{
     height: 100%;
 }
 body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+   
+    font-family: 'Nunito', sans-serif;
     height: 100%;
 }
 .container{
@@ -105,7 +103,8 @@ font-weight: 300;
     background: crimson;
 }
 #biryani,#paneer,#chicken,#vegetable,#chinese,#south-indian{
-    margin-top: 40px;   
+    margin-top: 40px;  
+    font-family: 'Aclonica',sans-serif; 
 }
 #paneer #item-card,#vegetable #item-card{
     background: rgb(213, 245, 166);
@@ -448,15 +447,20 @@ border:1px solid
             }
             #item-card{
                 width: 150px;
-                height: 200px;
+                height: 220px;
             }
             #item-card img{
                 width: 100px;
                 height: 100px;
+                margin-bottom: 10px;
+            }
+            #item-card:hover img{
+                transform: none;
             }
 
             #item-name,#item-price{
                 font-size: 15px;
+                margin: 5px 0;
 
             }
             .list-card{
@@ -507,7 +511,7 @@ border:1px solid
           @media screen and (max-width: 380px) {
             #item-card{
                 height: 220px;
-                width:150px;
+                width:150zpx;
             }
             #food-item{
                 padding: 0 ;

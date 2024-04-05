@@ -281,6 +281,7 @@ const categoryListData= [...new Map(foodItem.map(item=> [item
        
         var cloneListCard= listCard.cloneNode(true);
         categoryList.appendChild(listCard);
+        document.querySelector('.category-header').appendChild(cloneListCard);
        
     })
 }
