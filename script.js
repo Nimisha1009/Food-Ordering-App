@@ -294,6 +294,7 @@ const categoryListData= [...new Map(foodItem.map(item=> [item
 var cartData= [];
 
 function addToCart(){
+    
 var itemToAdd= this.parentNode.nextSibling.nextSibling.innerText;
 var itemObj= foodItem.find(element=>element.name==itemToAdd);
 
@@ -308,7 +309,7 @@ else if(index > -1){
 }
 
 document.getElementById('cart-plus').innerText= ' ' + cartData.length + ' Items';
-document.getElementById('m-cart-plus').innerText= ' '+ cartData.length;
+document.getElementById('m-cart-plus').innerText= ' ' + cartData.length;
 totalAmount();
 cartItems();
 }
@@ -355,10 +356,16 @@ function cartItems(){
     document.querySelectorAll('.increase-item').forEach(item=> {
         item.addEventListener('click',incrementItem)
     })
+    
 
     document.querySelectorAll('.decrease-item').forEach(item=> {
         item.addEventListener('click',decrementItem)
     })
+   
+     document.querySelectorAll('.add-to-cart').forEach(item=>  {
+            item.addEventListener('click',addToCart);
+        })
+
 }
 var currPrice= 0;
 function incrementItem(){
@@ -449,12 +456,12 @@ function addAddress(){
 
 
 
+
                                   /* mobile view */
 
  window.onresize=  window.onload= function(){
     var size= window.innerWidth;
-    console.log(size);
-      if(size<800){
+       if(size<800){
         var cloneFoodItems = document.getElementById('food-items').cloneNode(true);
         var cloneCartPage = document.getElementById('cart-page').cloneNode(true);
         document.getElementById('food-items').remove();

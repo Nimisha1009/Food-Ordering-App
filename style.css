@@ -121,9 +121,9 @@ font-weight: 300;
     font-family: 'Aclonica', sans-serif;}
 
 #item-card{
-    width: 180px;
-    height: 220px;
-    padding: 10px;
+    width: 160px;
+    height: 250px;
+    padding: 15px;
     margin: 10px;
     display: inline-block;
     border-radius: 5px;
@@ -147,12 +147,12 @@ font-weight: 300;
     transition: 0.5s all ease-in-out;
 }
 #item-card:hover img{
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 #rating{
     padding: 7px;
     color: goldenrod;
-    background: black;
+    background: rgb(32, 31, 31);
     font-size: 14px;
     border-radius: 15px;
 }
@@ -178,7 +178,7 @@ font-weight: 300;
         font-weight: 500;
         font-size: 18px;
     }
-    
+   
   
     .border{
         width: 80px;
@@ -206,7 +206,7 @@ font-weight: 300;
     }
     .list-card:hover img{
         transition: 0.5s all ease-in-out;
-        transform: scale(1.2);
+        transform: scale(1.3);
 }
     .list-name{
         font-size: 20px;
@@ -225,9 +225,7 @@ font-weight: 300;
     #food-items{        
         padding: 5px 10px;
     }
-    #category-list{
-       
-    }
+  
      .cart-toggle{
        display: none;
      }
@@ -253,7 +251,7 @@ font-weight: 300;
         background: whitesmoke;
     }
     
-    #cart-page{
+       #cart-page{
         background: rgb(255, 255, 255);
         margin: 40px 10px;
         margin-right: 50px;
@@ -261,12 +259,12 @@ font-weight: 300;
         padding-bottom: 30px;
         position: relative;
     }
-    #cart-title{
+       #cart-title{
         font-size: 35px;
         margin: 0;
         color: indianred;
     }
-    #cart-page table{
+      #cart-page table{
         width: 100%;
         margin-top: 20px;
         text-align: center;
@@ -275,8 +273,9 @@ font-weight: 300;
         font-size: 25px;
         padding-bottom: 10px;
     }
-    #m-total-amount{
+      #m-total-amount{
         display: none;
+        
     }
     #cart-page table tbody td{
         padding: 10px 0;
@@ -332,11 +331,25 @@ font-weight: 300;
         font-size: 20px;
         color: limegreen;
     }
- .cart-btn:active{
-color: crimson;
-background: none;
-border:1px solid 
-    }   
+    #delieverys{
+        font-size: 20px;
+        color: limegreen;
+        text-align: right;
+
+    }
+    #checkouts{
+        text-align: right;
+        margin: 40px auto;
+        border-radius: 5px;
+        background: white;
+        padding: 10px 20px;
+    }
+
+       .cart-btn:active{
+            color: crimson;
+            background: none;
+            border:1px solid 
+             }   
 
 
                                        /*media screen*/
@@ -497,7 +510,7 @@ border:1px solid
                 padding: 5px 10px;
                 margin: 0;
                 border: 1px solid lightcoral;
-                float: right;
+                
             }
             .cart-btn{
                 font-size: 14px;
@@ -521,4 +534,4 @@ border:1px solid
             }
           }
         }
-    
+  
