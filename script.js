@@ -454,7 +454,7 @@ function addAddress(){
  window.onresize=  window.onload= function(){
     var size= window.innerWidth;
     console.log(size);
-      if(size < 800){
+      if(size<800){
         var cloneFoodItems = document.getElementById('food-items').cloneNode(true);
         var cloneCartPage = document.getElementById('cart-page').cloneNode(true);
         document.getElementById('food-items').remove();
@@ -463,14 +463,16 @@ function addAddress(){
         document.getElementById('food-items').after(cloneCartPage);
          addEvents();
           }
-      if(size > 800){
+      if(size>800){
         var cloneFoodItems = document.getElementById('food-items').cloneNode(true);
         document.getElementById('food-items').remove();
         document.getElementById('header').after(cloneFoodItems);
         var cloneFoodItems = document.getElementById('cart-page').cloneNode(true);
         document.getElementById('cart-page').remove();
         document.getElementById('food-items').after(cloneCartPage);
+        document.querySelector('#mobile-view').remove();
         addEvents();
+       
 
       }
  }

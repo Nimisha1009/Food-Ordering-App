@@ -341,7 +341,7 @@ border:1px solid
 
                                        /*media screen*/
 
-    @media screen and (max-width: 800px)
+    @media screen and (max-width: 800px) 
      {
         #container{
             display: none;
@@ -351,7 +351,7 @@ border:1px solid
             grid-template-rows: 120px 1fr 50px;
             overflow: hidden;
             height: 100%;
-            width: 100%;
+            width: 100vw;
         }
         .mobile-top{
             padding:5px 15px;
@@ -520,12 +520,5 @@ border:1px solid
                 padding: 0 ;
             }
           }
-          
-
-
-
-
-
-
         }
     
