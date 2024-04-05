@@ -336,8 +336,10 @@ font-weight: 300;
 color: crimson;
 background: none;
 border:1px solid 
-    }
+    }   
 
+
+                                       /*media screen*/
 
     @media screen and (max-width: 800px)
      {
@@ -349,6 +351,7 @@ border:1px solid
             grid-template-rows: 120px 1fr 50px;
             overflow: hidden;
             height: 100%;
+            width: 100%;
         }
         .mobile-top{
             padding:5px 15px;
@@ -470,7 +473,7 @@ border:1px solid
                 margin: 3px 0;
                 padding: 10px 5px;
                 padding-bottom: 30px;
-                border-top: 1px solid reg(219,219,219);
+                border-top: 1px solid rgb(219,219,219);
             }
 
             #cart-page table thead td{

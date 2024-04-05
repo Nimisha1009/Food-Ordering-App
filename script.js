@@ -292,6 +292,7 @@ const categoryListData= [...new Map(foodItem.map(item=> [item
 })
    
 var cartData= [];
+
 function addToCart(){
 var itemToAdd= this.parentNode.nextSibling.nextSibling.innerText;
 var itemObj= foodItem.find(element=>element.name==itemToAdd);
@@ -300,15 +301,14 @@ var index= cartData.indexOf(itemObj);
 if(index=== -1){
     document.getElementById(itemObj.id).classList.add('toggle-heart');
     cartData= [...cartData,itemObj];
+    console.log(cartData);
 }
 else if(index > -1){
     alert("Added to cart!");
 }
 
-document.getElementById('cart-plus').innerText=
-' ' + cartData.length + ' Items';
-document.getElementById('m-cart-plus').innerText=
-' ' + cartData.length;
+document.getElementById('cart-plus').innerText= ' ' + cartData.length + ' Items';
+document.getElementById('m-cart-plus').innerText= ' '+ cartData.length;
 totalAmount();
 cartItems();
 }
@@ -363,7 +363,7 @@ function cartItems(){
 var currPrice= 0;
 function incrementItem(){
     let itemToInc= this.parentNode.previousSibling.innerText;
-    console.log(itemToInc)
+   
     var incObj= cartData.find(element=>element.name== itemToInc);
     incObj.quantity+= 1;
     
@@ -415,8 +415,8 @@ function totalAmount(){
     document.getElementById('m-total-amount').innerText= 'Total Price : Rs  ' + sum;
 }
 
-document.getElementById('cart-plus').addEventListener('click',cartToggle);
- document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
+   document.getElementById('cart-plus').addEventListener('click',cartToggle);
+    document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
 
 
 function cartToggle(){
@@ -424,11 +424,11 @@ function cartToggle(){
         document.getElementById('food-items').classList.toggle('food-items');
         document.getElementById('category-list').classList.toggle('food-items');
        document.getElementById('category-header').classList.toggle('toggle-category');
-      document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
+      document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle');
         document.getElementById('cart-page').classList.toggle('cart-toggle');
         document.getElementById('checkout').classList.toggle('cart-toggle');
         flag= true;
-        console.log(flag)
+      
     }
     else{
         alert("Currently no item in cart!");
@@ -446,6 +446,11 @@ function addAddress(){
         alert("Address not added");
     }
 }
+
+
+
+                                  /* mobile view */
+
  window.onresize=  window.onload= function(){
     var size= window.innerWidth;
     console.log(size);
