@@ -351,11 +351,11 @@ function cartItems(){
     
         tableBody.appendChild(tableRow);
     })
-    document.querySelectorAll('.increase-item').forEach(item=>{
+    document.querySelectorAll('.increase-item').forEach(item=> {
         item.addEventListener('click',incrementItem)
     })
 
-    document.querySelectorAll('.decrease-item').forEach(item=>{
+    document.querySelectorAll('.decrease-item').forEach(item=> {
         item.addEventListener('click',decrementItem)
     })
 }
@@ -387,13 +387,13 @@ function decrementItem(){
         document.getElementById(decObj.id).classList.remove('toggle-heart')
         cartData.splice(ind,1);
         document.getElementById('cart-plus').innerText= ' ' + cartData.length + ' Items';
-       // document.getElementById('m-cart-plus').innerText= ' ' + cartData.length;
+       document.getElementById('m-cart-plus').innerText= ' ' + cartData.length;
         if(cartData.length < 1 && flag){
             document.getElementById('food-items').classList.toggle('food-items');
             document.getElementById('category-list').classList.toggle('food-items');
-          // document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
+          document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
             document.getElementById('cart-page').classList.toggle('cart-toggle');
-          //  document.getElementById('category-header').classList.toggle('toggle-category');
+           document.getElementById('category-header').classList.toggle('toggle-category');
             document.getElementById('checkout').classList.toggle('cart-toggle');
             flag= false;
             alert("Currently no item in cart!");
@@ -415,15 +415,15 @@ function totalAmount(){
 }
 
 document.getElementById('cart-plus').addEventListener('click',cartToggle);
-// document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
+ document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
 
 
 function cartToggle(){
     if(cartData.length > 0){
         document.getElementById('food-items').classList.toggle('food-items');
         document.getElementById('category-list').classList.toggle('food-items');
-       // document.getElementById('category-header').classList.toggle('toggle-category');
-      //  document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
+       document.getElementById('category-header').classList.toggle('toggle-category');
+      document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
         document.getElementById('cart-page').classList.toggle('cart-toggle');
         document.getElementById('checkout').classList.toggle('cart-toggle');
         flag= true;
@@ -445,5 +445,41 @@ function addAddress(){
         alert("Address not added");
     }
 }
+ window.onresize=  window.onload= function(){
+    var size= window.innerWidth;
+    console.log(size);
+      if(size < 800){
+        var cloneFoodItems = document.getElementById('food-items').cloneNode(true);
+        var cloneCartPage = document.getElementById('cart-page').cloneNode(true);
+        document.getElementById('food-items').remove();
+        document.getElementById('cart-page').remove();
+        document.getElementById('category-header').after(cloneFoodItems);
+        document.getElementById('food-items').after(cloneCartPage);
+         addEvents();
+          }
+      if(size > 800){
+        var cloneFoodItems = document.getElementById('food-items').cloneNode(true);
+        document.getElementById('food-items').remove();
+        document.getElementById('header').after(cloneFoodItems);
+        var cloneFoodItems = document.getElementById('cart-page').cloneNode(true);
+        document.getElementById('cart-page').remove();
+        document.getElementById('food-items').after(cloneCartPage);
+        addEvents();
+
+      }
+ }
+
+ function addEvents(){
+    document.querySelectorAll('.add-to-cart').forEach(item=>{
+        item.addEventListener('click',addToCart);
+    })
+    document.querySelectorAll('.increase-item').forEach(item=>{
+        item.addEventListener('click',incrementItem)
+    })
+
+    document.querySelectorAll('.decrease-item').forEach(item=>{
+        item.addEventListener('click',decrementItem)
+    })
+ }
 
 

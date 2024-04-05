@@ -409,6 +409,7 @@ border:1px solid
             }
             .list-card:hover{
                 background: none;
+                transform: none;
 
             }
             .list-card:hover img{
@@ -485,8 +486,33 @@ border:1px solid
 
             #m-total-amount{
                 display: inline-block;
+                color: lightcoral;
+                padding: 5px 10px;
+                margin: 0;
+                border: 1px solid lightcoral;
+                float: right;
             }
-
+            .cart-btn{
+                font-size: 14px;
+                background: lightcoral;
+                padding: 8px 15px;
+                margin: auto;
+            }
+          .btn-box{
+            text-align: center;
+          }
+          #biryani{
+            margin-top: 10px;
+          }
+          @media screen and (max-width: 380px) {
+            #item-card{
+                height: 220px;
+                width:150px;
+            }
+            #food-item{
+                padding: 0 ;
+            }
+          }
           
 
 
