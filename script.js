@@ -175,10 +175,7 @@ function displayItems(){
         vegetable.appendChild(itemCard)
         
     })
-   
-    
-
-    chineseData.map(item=>{
+   chineseData.map(item=>{
         var itemCard= document.createElement('div');
         itemCard.setAttribute('id','item-card')
 
@@ -257,13 +254,15 @@ function displayItems(){
       })
         }
 displayItems();
- 
-const categoryListData= [...new Map(foodItem.map(item=> [item
- ['category'],item])).values()];
- console.log(categoryListData);
 
-    function categoryLists(){
-    var categoryList= document.getElementById('category-list');
+                                          //side menu
+ 
+          const categoryListData= [...new Map(foodItem.map(item=> [item
+          ['category'],item])).values()];
+           console.log(categoryListData);
+
+          function categoryLists(){
+          var categoryList= document.getElementById('category-list');
         categoryListData.map(item=> {
         var listCard= document.createElement('div');
         listCard.setAttribute('class','list-card');
@@ -281,13 +280,16 @@ const categoryListData= [...new Map(foodItem.map(item=> [item
        
         var cloneListCard= listCard.cloneNode(true);
         categoryList.appendChild(listCard);
-        document.querySelector('.category-header').appendChild(cloneListCard);
+     
        
     })
 }
  categoryLists();
+              
 
- document.querySelectorAll('.add-to-cart').forEach(item=>{
+                                    //cart
+
+document.querySelectorAll('.add-to-cart').forEach(item=>{
     item.addEventListener('click',addToCart)
 })
    
@@ -309,10 +311,11 @@ else if(index > -1){
 }
 
 document.getElementById('cart-plus').innerText= ' ' + cartData.length + ' Items';
-document.getElementById('m-cart-plus').innerText= ' ' + cartData.length;
+
 totalAmount();
 cartItems();
 }
+
 
 function cartItems(){
     var tableBody=  document.getElementById('table-body');
@@ -362,15 +365,12 @@ function cartItems(){
         item.addEventListener('click',decrementItem)
     })
    
-     document.querySelectorAll('.add-to-cart').forEach(item=>  {
-            item.addEventListener('click',addToCart);
-        })
-
+   
 }
 var currPrice= 0;
 function incrementItem(){
     let itemToInc= this.parentNode.previousSibling.innerText;
-   
+     console.log(itemToInc)
     var incObj= cartData.find(element=>element.name== itemToInc);
     incObj.quantity+= 1;
     
@@ -394,14 +394,15 @@ function decrementItem(){
     else{
         document.getElementById(decObj.id).classList.remove('toggle-heart')
         cartData.splice(ind,1);
-        document.getElementById('cart-plus').innerText= ' ' + cartData.length + ' Items';
-       document.getElementById('m-cart-plus').innerText= ' ' + cartData.length;
+        document.getElementById('cart-plus').innerHTML= ' ' + cartData.length + ' Items';
+
+
         if(cartData.length < 1 && flag){
             document.getElementById('food-items').classList.toggle('food-items');
             document.getElementById('category-list').classList.toggle('food-items');
-          document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
+       // document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
             document.getElementById('cart-page').classList.toggle('cart-toggle');
-           document.getElementById('category-header').classList.toggle('toggle-category');
+        //  document.getElementById('category-header').classList.toggle('toggle-category');
             document.getElementById('checkout').classList.toggle('cart-toggle');
             flag= false;
             alert("Currently no item in cart!");
@@ -412,7 +413,7 @@ function decrementItem(){
     cartItems();
 }
 
-function totalAmount(){
+  function totalAmount(){
     var sum=0;
     cartData.map(item=>{
         sum+= item.price;
@@ -422,22 +423,22 @@ function totalAmount(){
     document.getElementById('m-total-amount').innerText= 'Total Price : Rs  ' + sum;
 }
 
-   document.getElementById('cart-plus').addEventListener('click',cartToggle);
-    document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
+  document.getElementById('cart-plus').addEventListener('click',cartToggle);
+
 
 
 function cartToggle(){
     if(cartData.length > 0){
         document.getElementById('food-items').classList.toggle('food-items');
         document.getElementById('category-list').classList.toggle('food-items');
-       document.getElementById('category-header').classList.toggle('toggle-category');
-      document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle');
+      // document.getElementById('category-header').classList.toggle('toggle-category');
+       // document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle');
         document.getElementById('cart-page').classList.toggle('cart-toggle');
         document.getElementById('checkout').classList.toggle('cart-toggle');
         flag= true;
       
-    }
-    else{
+       }
+       else{
         alert("Currently no item in cart!");
     }
 }
@@ -454,5 +455,9 @@ function addAddress(){
     }
 }
 
-
+function search(){
+    let filter = document.getElementById('find').value.toUpperCase();
+    let item = document.querySelectorAll('.displayItems');
+    let l = document.getElementsByTagName
+}
 
