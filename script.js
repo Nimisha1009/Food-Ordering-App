@@ -335,7 +335,7 @@ function cartItems(){
         var rowData3= document.createElement('td');
         var btn1= document.createElement('button');
         btn1.setAttribute('class','decrease-item');
-        btn1.innerHTML= '-';
+        btn1.innerText= '-';
         var span= document.createElement('span');
         span.innerText= item.quantity;
         var btn2= document.createElement('button');
@@ -455,9 +455,4 @@ function addAddress(){
     }
 }
 
-function search(){
-    let filter = document.getElementById('find').value.toUpperCase();
-    let item = document.querySelectorAll('.displayItems');
-    let l = document.getElementsByTagName
-}
 
